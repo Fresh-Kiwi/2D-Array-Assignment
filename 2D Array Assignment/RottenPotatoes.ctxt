@@ -2,6 +2,14 @@
 comment0.target=RottenPotatoes
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-comment2.params=data\ ans
-comment2.target=double\ movieAvgRating(int[][],\ double)
-numComments=3
+comment2.params=data\ mov
+comment2.target=int\ movieAvgRating(int[][],\ int)
+comment3.params=data\ rev
+comment3.target=int\ reviewerAvgRating(int[][],\ int)
+comment4.params=data
+comment4.target=int\ allAvgRatings(int[][])
+comment5.params=data
+comment5.target=int\ hardestReviewer(int[][])
+comment6.params=data
+comment6.target=int\ worstMovie(int[][])
+numComments=7
