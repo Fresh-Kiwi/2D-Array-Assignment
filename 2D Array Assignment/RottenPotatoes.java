@@ -16,6 +16,7 @@ class RottenPotatoes
             System.out.println("Enter '3' to find the average rating for all movies and reviewers.");
             System.out.println("Enter '4' to find the hardest reviewer.");
             System.out.println("Enter '5' to find the worst movie.");
+            System.out.println("Enter '0' to quit.");
             
             System.out.println("");
             
@@ -33,8 +34,9 @@ class RottenPotatoes
                 System.out.println("");
                 
                 System.out.println("The movie has an average rating of: " + movieAvgRating(data, mov));
-            }
-            if (c == 2) {
+                
+                System.out.println("");
+            } else if (c == 2) {
                 System.out.println("Enter the reviewer's index.");
                 
                 System.out.println("");
@@ -44,15 +46,22 @@ class RottenPotatoes
                 System.out.println("");
                 
                 System.out.println("The reviewer's average rating is: " + reviewerAvgRating(data, rev));
-            }
-            if (c == 3) {
-                System.out.println("Not working right now, sorry.");
-            }
-            if (c == 4) {
+                
+                System.out.println("");
+            } else if (c == 3) {
+                System.out.println("The average rating for all movies is: " + allAvgRatings(data));
+                
+                System.out.println("");
+            } else if (c == 4) {
                 System.out.println("The hardest reviewer's index is: " + hardestReviewer(data));
-            }
-            if (c == 5) {
+                
+                System.out.println("");
+            } else if (c == 5) {
                 System.out.println("The worst movie's index is: " + worstMovie(data));
+                
+                System.out.println("");
+            } else if (c == 0) {
+                run = false;
             }
         }
     }
@@ -86,7 +95,19 @@ class RottenPotatoes
     }
     
     public static int allAvgRatings(int[][] data) {
-        return 1;
+        int r = 0;
+        int count = 0;
+        
+        for (int y = 0; y < data.length; y++) {
+            for (int x = 0; x < data[y].length; x++) {
+                r += data[y][x];
+                count++;
+            }
+        }
+        
+        double ans = Math.round(1.0*r/count);
+        
+        return (int) ans;
     }
     
     public static int hardestReviewer(int[][] data) {
